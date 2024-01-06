@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background: #000;
+    color: #FFF;
+    position: relative;
+    z-index: 1;
+    /* border: 1px solid #b90c21; */
+}
+
+section {
+    width: 100vw;
+}
+
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.navigation-menu {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100000000000000000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu-item {
+    padding: 30px;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    padding-top: 100px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 500px;
+    background: url(./img/concert.jpg) center center / cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: transparent;
+}
+
+.title {
+    font-size: 50px;
+    color: #fff;
+    margin-top: 90px;
+    background: none;
+}
+
+.subtitle {
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 5px;
+    background: none;
+}
+
+.shedule-title {
+    display: flex;
+    justify-content: center;
+    font-size: 44px;
+    margin-top: 50px;
+}
+
+.shedule-overlay {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: transparent;
+    margin-top: 160px;
+}
+
+.shedule-subtitle {
+    font-size: 23px;
+    color: #fff;
+    margin-bottom: 5px;
+    background: none;
+}
+
+.artists {
+    margin-top: 300px;
+
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+    background: none;
+}
+
+.card p:nth-child(2) {
+    margin-bottom: 50px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.card-subtitle {
+    margin-top: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-button {
+    background-color: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.buy-button:hover {
+    background-color: #262c26;
+}
+
+.title-testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 34px;
+
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial {
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.author {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.fg-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 34px;
+}
+
+.faq {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.faq-item {
+    margin-bottom: 5px;
+
+    border: 1px solid #fff;
+}
+
+.faq-title {
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+
+    color: #fff;
+    cursor: pointer;
+
+    transition: background .2s ease-out;
+}
+
+.faq-title:after {
+    content: "";
+    display: block;
+
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    transform: translateY(-50%);
+}
+
+.faq-title:hover {
+    background-color: #b90c21;
+}
+
+.faq-input {
+    width: 0;
+    height: 0;
+
+    -webkit-appearance: none;
+    appearance: none;
+
+    position: absolute;
+}
+
+/* .faq-input:checked ~ .faq-title {
+    background-color: #b91125;
+} */
+
+.faq-input:checked~.faq-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #fff transparent;
+}
+
+.faq-input:checked~.faq-text {
+    display: block;
+}
+
+.faq-text {
+    display: none;
+    padding: 10px 15px;
+
+    color: #fff;
+    font-size: 18px;
+}
+
+
+
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    height: 80px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #454141;
+}
+
+/* .footer-title {
+    margin-top: 60px;
+} */
+
+
+/*laptop */
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .navigation-menu {
+        height: 60px;
+        width: 100%;
+    }
+
+    .menu {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .menu-item {
+        padding: 10px 20px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 25px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    .testimonial {
+        width: 100%;
+        margin: 10px 25px;
+    }
+
+    .testimonial p {
+        font-size: 20px;
+    }
+
+    .faq {
+        padding: 0 25px;
+    }
+
+    .faq-input::placeholder {
+        font-size: 20px;
+    }
+}
+
+/* mobile*/
+
+@media screen and (max-width: 360px) {
+    .navigation-menu {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    a {
+        font-size: 15px;
+    }
+
+    a span {
+        display: none;
+    }
+
+    .menu {
+        padding: 5px;
+    }
+
+    .menu-item {
+        padding: 10px;
+        list-style-type: none;
+    }
+
+    .header {
+        padding-top: 60px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .shedule-title {
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        margin-top: 50px;
+    }
+
+    .title {
+        font-size: 50px;
+        margin-top: 0;
+    }
+
+    .faq {
+        padding: 0 10px;
+    }
+}
